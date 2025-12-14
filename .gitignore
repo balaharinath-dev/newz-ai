@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# Virtual Environments
+.env
+.venv/
+venv/
+ENV/
+
+# Environment files
+*.env
+*.env.*
+secrets.json
+cred.json
+service-account.json
+
+# Cache & Temp
+*.sqlite3
+*.db
+.cache/
+pytest_cache/
+.mypy_cache/
+coverage/
+dist/
+build/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# GCP / Cloud
+# (Store these securely, not in git)
+*.json     # SA keys usually .json
+.gcloud/
+.cloudshell/
+
+# Docker
+docker-data/

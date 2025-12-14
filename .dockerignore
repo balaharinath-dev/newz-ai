@@ -1,0 +1,39 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Venv — NEVER copy to Docker
+.venv/
+venv/
+ENV/
+
+# Git + metadata
+.git
+.gitignore
+
+# Tests
+tests/
+pytest_cache/
+
+# Local files
+*.log
+*.db
+*.sqlite3
+*.env
+*.env.*
+secrets.json
+cred.json
+service-account.json
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+docker-data/
+docker-compose.yml
+
+# OS junk
+.DS_Store
+Thumbs.db
