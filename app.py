@@ -45,10 +45,20 @@ async def send_news():
         logger.info(f"Last message type: {type(last_message)}")
         logger.info(f"Last message: {last_message}")
         
-        content = last_message.content if hasattr(last_message, 'content') else str(last_message)
+        if hasattr(last_message, 'content') and isinstance(last_message.content, list):
+            content = last_message.content[0]['text']
+        elif hasattr(last_message, 'content'):
+            content = last_message.content
+        else:
+            content = str(last_message)
         
         logger.info(f"Content type: {type(content)}")
         logger.info(f"Content preview: {content[:200] if isinstance(content, str) else content}")
+        
+        if content.startswith('```json'):
+            content = content.split('```json')[1].split('```')[0].strip()
+        elif content.startswith('```'):
+            content = content.split('```')[1].split('```')[0].strip()
         
         news_data = json.loads(content)
         
