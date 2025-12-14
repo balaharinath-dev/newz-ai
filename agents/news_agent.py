@@ -10,10 +10,7 @@ import os
 
 load_dotenv()
 
-service_account_path = os.getenv("SERVICE_ACCOUNT_FILE")
-
-credentials, project_id = google.auth.load_credentials_from_file(
-    service_account_path,
+credentials, project_id = google.auth.default(
     scopes=["https://www.googleapis.com/auth/cloud-platform"]
 )
 

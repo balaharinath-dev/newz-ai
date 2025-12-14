@@ -339,7 +339,3 @@ def send_email(recipient_email, html_content):
         server.starttls()
         server.login(sender_email, sender_password)
         server.send_message(msg)
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
