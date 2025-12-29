@@ -3,16 +3,11 @@ from langchain.agents import create_agent
 from langchain.tools import tool
 from dotenv import load_dotenv
 from datetime import datetime
-import google.auth
 import feedparser
 import requests
 import os
 
 load_dotenv()
-
-credentials, project_id = google.auth.default(
-    scopes=["https://www.googleapis.com/auth/cloud-platform"]
-)
 
 @tool
 def fetch_top_news():
@@ -176,9 +171,8 @@ system_prompt = (
                 )
 
 model = ChatVertexAI(
-    model="gemini-2.5-flash",
-    temperature=0,
-    credentials=credentials
+    model="gemini-2.5-pro",
+    temperature=0
 )
 
 news_agent = create_agent(
