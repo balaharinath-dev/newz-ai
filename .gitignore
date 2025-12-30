@@ -44,3 +44,5 @@ build/
 
 # Docker
 docker-data/
+
+test.py
