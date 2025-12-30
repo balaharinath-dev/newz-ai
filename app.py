@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from agents.news_agent import news_agent
+from news_agent import news_agent
 
 from dotenv import load_dotenv
 
