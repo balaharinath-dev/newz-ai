@@ -8,6 +8,10 @@ __pycache__/
 venv/
 ENV/
 
+# Environment files
+.env
+*.env.*
+
 # Git + metadata
 .git
 .gitignore
